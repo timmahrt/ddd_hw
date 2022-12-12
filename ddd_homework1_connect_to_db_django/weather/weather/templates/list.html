@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    Here is a list of all recorded weather:
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Temperature</th>
+        </tr>
+        {% for row in weather %}
+        <tr>
+            <td>{{row.date}}</td>
+            <td>{{row.temperature}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+{% endblock %}
